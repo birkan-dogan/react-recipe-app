@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import Details from "../details/Details";
 import styling from "./Home.module.css";
 const Home = () => {
   const [search, setSearch] = useState("");
-  const [drop, setDrop] = useState("");
+  const [drop, setDrop] = useState("breakfast");
   const [foodList, setFoodList] = useState([]);
+  const navigate = useNavigate();
   // console.log(search, drop);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,12 +18,16 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setFoodList(data.hits));
     // console.log(foodList);
+    navigate("/details");
   };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
   return (
     <div>
-      <div className={styling.container}>
-        <h1>Food App</h1>
-        <div>
+      <div>
+        <div className={styling.container}>
+          <h1>Food App</h1>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -44,6 +51,8 @@ const Home = () => {
               Search
             </button>
           </form>
+          <Details foodList={foodList} />
+          <Outlet />
         </div>
       </div>
     </div>
