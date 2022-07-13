@@ -1,0 +1,41 @@
+.container {
+  height: 88.5vh;
+  background-color: #9cb4cc;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+.h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  color: #c70a80;
+}
+.img {
+  width: 150px;
+}
+.ingredients {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+  padding: 2rem;
+}
+.ingredients img {
+  border-radius: 1rem;
+  /* margin-top: 2rem; */
+  box-shadow: 1px 1px 10px black;
+}
+.ingredients .list {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  width: 20vw;
+}
+.ingredients .nutrients {
+  line-height: 3rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}

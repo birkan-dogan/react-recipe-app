@@ -4,7 +4,6 @@ import styling from "./Details.module.css";
 
 const Details = ({ foodList }) => {
   const navigate = useNavigate();
-  console.log(foodList);
   return (
     <div className={styling.container1}>
       {foodList?.map((food, index) => {
@@ -17,7 +16,9 @@ const Details = ({ foodList }) => {
             <h1 className={styling.h1}>{label}</h1>
             <button
               className={styling.btn}
-              onClick={() => navigate(`/details/${index}`)}
+              onClick={() =>
+                navigate(`/details/recipecard`, { state: foodList[index] })
+              }
             >
               View More
             </button>

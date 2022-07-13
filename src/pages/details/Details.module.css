@@ -5,20 +5,20 @@
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
-  margin: 1rem;
+  /* margin: 0.5rem; */
   /* margin-bottom: 2rem; */
 }
 .inner {
   background-color: #f7e2d6;
   /* border: 1px solid black; */
   box-shadow: 1px 1px 15px gray;
-  padding: 0.6rem;
+  padding: 0.4rem;
   margin: 0.3rem;
   border-radius: 1rem;
   transition: all 0.5s;
 }
 .inner:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   cursor: pointer;
 }
 .h1 {
@@ -27,7 +27,7 @@
   font-family: "Edu NSW ACT Foundation", cursive;
 }
 .images {
-  width: 175px;
+  width: 150px;
   border-radius: 1rem;
 }
 .btn {
