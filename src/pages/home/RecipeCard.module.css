@@ -1,5 +1,5 @@
 .container {
-  height: 88.5vh;
+  height: auto;
   background-color: #9cb4cc;
 }
 
@@ -28,14 +28,35 @@
   border-radius: 1rem;
   /* margin-top: 2rem; */
   box-shadow: 1px 1px 10px black;
+  width: 15rem;
 }
 .ingredients .list {
   font-size: 1.3rem;
   line-height: 2.5rem;
   width: 20vw;
+  height: 50vh;
+  overflow: auto;
 }
 .ingredients .nutrients {
   line-height: 3rem;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
+  height: 50vh;
+  overflow: auto;
+}
+@media (max-width: 700px) {
+  .ingredients {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .h1 {
+    font-size: 1.5rem;
+  }
+  .img {
+    display: none;
+  }
+  .ingredients .list {
+    width: 100vw;
+  }
 }

@@ -20,14 +20,14 @@ const Home = () => {
     // console.log(foodList);
     navigate("/details");
   };
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    fetchData();
+  }, [drop]);
   return (
     <div>
       <div>
         <div className={styling.container}>
-          <h1>Food App</h1>
+          <h1 style={{ marginTop: "1rem" }}>Food App</h1>
           <form onSubmit={handleSubmit}>
             <input
               type="text"

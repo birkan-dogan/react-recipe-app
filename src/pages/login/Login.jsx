@@ -1,19 +1,21 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet, useNavigate } from "react-router-dom";
 import image from "../../assets/meal2.svg";
+import Navbar from "../../components/navbar/Navbar";
 import styling from "./Login.module.css";
 const Login = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showNav, setShowNav] = useState(false);
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
   };
   const handleClick = () => {
-    setIsAuthenticated(true);
+    setShowNav(true);
   };
-  if (isAuthenticated) {
-    return <Outlet />;
-  }
-  return (
+
+  return showNav ? (
+    <Outlet />
+  ) : (
     <div className={styling.container}>
       <div>
         <img src={image} alt="login" className={styling.img} />

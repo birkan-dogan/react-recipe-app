@@ -7,7 +7,12 @@ const Navbar = () => {
     <div>
       <nav className={styling.container}>
         <Link to="/">
-          <img src={image} alt="food" style={{ width: "75px" }} />
+          <img
+            src={image}
+            alt="food"
+            style={{ width: "60px" }}
+            className={styling.img}
+          />
         </Link>
         <div className={styling.inner}>
           <Link to="/about" className={styling.link}>

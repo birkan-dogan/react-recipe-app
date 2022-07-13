@@ -1,17 +1,16 @@
 .container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  height: 100vh;
+  height: auto;
   background-color: #9cb4cc;
-  /* text-align: center; */
 }
 .input {
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   font-size: 1rem;
   border: none;
   border-radius: 0.5rem;
+  margin: 1rem 0;
 }
 .input:focus {
   outline: none;
@@ -45,4 +44,16 @@
 .btn:hover {
   transform: scale(0.95);
   opacity: 0.7;
+}
+@media (max-width: 387px) {
+  .input {
+    padding: 0.1rem;
+    font-size: 1rem;
+  }
+  .drop {
+    padding: 0.1rem;
+  }
+  .btn {
+    padding: 0.1rem;
+  }
 }
